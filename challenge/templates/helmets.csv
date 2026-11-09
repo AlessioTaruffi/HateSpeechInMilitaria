@@ -1,0 +1,27 @@
+template_id,functionality,label,text,pairable,explicitness
+helmN101,N1,0,"The helmet shell is maker/size marked {MAKER_H} on the inside rim, and bears a {BRANCH} decal on one side and a tricolour one on the other.",yes,explicit
+helmN201,N2,0,"The helmet lot number places it in the year {YEAR} as a batch for the {BRANCH}.",yes,explicit
+helmN301,N3,0,"The liner is not a first model for this {MODEL}, maybe it is a replacement.",no,explicit
+helmN302,N3,0,"Nice {BRANCH} helmet, the chinstrap seems to be a reproduction.",no,explicit
+helmN401,N4,0,"Based on similar examples sold recently i would say it's worth {PRICE} euros.",no,explicit
+helmN601,N6,0,"Original {MODEL} and in great shape, i love the patina on this one.",no,explicit
+helmN701,N7,0,"This is a classic camo pattern for the {BRANCH} that started appearing around {YEAR}.",yes,explicit
+helmN901,N9,0,"Can anyone make out the maker mark on this one?",no,explicit
+helmN1101,N11,0,"Publicly displaying the SS symbol in Australia is forbidden due to it being classified as hate symbolism.",yes,explicit
+helmN102,N1,0,"The helmet still has about 90% of the {BRANCH} decal, while the camo paint around is heavily chipped.",yes,explicit
+helmN402,N4,0,"I would not be surprised if this sold for {PRICE} or more, {BRANCH} helmets are in high demand.",no,explicit
+helmN602,N6,0,"I don't like the difference in patina on this {MODEL}, i think it's odd.",no,explicit
+helmN702,N7,0,"A lot of these {MODEL}s made by {MAKER_H} in those years were never issued.",yes,explicit
+helmN801,N8,0,"I would not want to keep one of these, think about what the SS did during those years.",no,explicit
+helmN802,N8,0,"Displayed with a card explaining what the unit did. People should leave knowing that part too.",no,explicit
+helmN1001,N10,0,"The MVSN insignia on the italian M33 helmets was removed from {YEAR} onwards.",yes,explicit
+helmN1002,N10,0,"The italian Black Brigades wore skulls on their M33s to instigate fear.",yes,explicit
+helmN1201,N12,0,"I would treat this {MODEL} with oxalic acid in order to remove any rust.",no,explicit
+helmN1202,N12,0,"Beware of vaseline, it can damage the finish.",no,explicit
+helmH101,H1,1,"The {BRANCH} truly had some wonderful uniforms, too bad they taught us they were the bad guys.",no,deictic
+helmH301,H3,1,"The {BRANCH} had nothing to do with those crimes, they just followed orders from above.",no,explicit
+helmH201,H2,1,"The fasces on these are quite striking. A NOI!",no,explicit
+helmH202,H2,1,"Yeah the {BRANCH} might have done bad things, but the fact those ideas still linger today says something.",no,explicit
+helmH401,H4,1,"Proud owner of an original {MODEL}. 14/88, and the collection keeps growing.",no,coded
+helmH203,H2,1,"An SS lid is the centrepiece of any collection. They stood for something, whatever the history books say now.",no,explicit
+helmH302,H3,1,"The SS did nothing in the East that the Red Army did not do twice over.",no,explicit

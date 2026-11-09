@@ -1,0 +1,77 @@
+Oggetti a:
+carica alta: fibbie e cinturoni, cuff title e mostrine, daghe, bandiere 
+arica media: elmetti, decorazioni, documenti, uniformi
+carica bassa: field gear, fotografie /cartoline
+
+Funzionalitá NOT hate: 
+1	Descrizione di marcature e insegne	"The helmet retains about 80% of the decal on the left side."
+N2	Datazione, produttore, provenienza	"Maker-marked and dated 1943, from a Berlin contractor."
+N3	Autenticità e riconoscimento falsi	"The stamp is too crisp for a period piece, likely a reproduction."
+N4	Mercato e valutazione	"Similar examples have been selling around 400 euros lately."
+N5	Citazione di iscrizione o motto come testo inciso	"The blade carries the standard inscription along the ricasso."
+N6	Valutazione estetica e stato di conservazione	"Beautiful piece, the patina is exactly right."
+N7	Contesto storico narrativo	"This pattern was issued to units on the Eastern Front from 1942."
+N8	Descrizione con condanna esplicita o funzione memoriale	"A grim object, kept as a reminder of what that regime did."
+N9	Richiesta di identificazione	"Can anyone identify this marking on the inner rim?"
+N10	Militaria non-tedesca con lessico comunque carico	Confederata, giapponese imperiale, sovietica
+N11	Normativa su possesso ed esposizione	"In Germany the symbol has to be covered for public display."
+N12	Restauro e conservazione tecnica	"I'd leave the original finish, cleaning it would kill the value."
+
+Funzionalitá HATE
+H1	Endorsement nel registro collezionistico	"Great days. We could use men like that again."
+H2	Nostalgia politica in prima persona	Adesione esplicita all'ideologia
+H3	Negazionismo o minimizzazione	Dei crimini associati agli oggetti
+H4	Codici identitari fuori funzione descrittiva	Numeri e sigle usati come segnale, non come dato di catalogo
+H5	Slur rivolti a gruppi protetti	Nel contesto della discussione
+H6	Attacco a un altro utente in quanto membro di un gruppo	
+H7	Minaccia o incitamento
+
+PER H5 H6 H7 SI RIUSANO I TEMPLATE DI HATECHECK INVECE DI RISCRIVERNE NUOVI
+
+Per il controllo N10 (non tedesco) si scelgono giapponese imperiale, 
+sovietico e italiano per la carica politica
+
+Probe diagnostico su BERT/HateXplain.
+Slur esplicito 0.96; "hate all of them, should be deported" 0.23;
+item militaria 0.002-0.044.
+Diagnosi: il modello è tarato su slur lessicali, cieco all'abuso
+proposizionale. FPR e TPR sul challenge set entrambi 0.000.
+Riorientamento: metrica principale = recall sugli item hate,
+non FPR sul descrittivo.
+
+Test iniziali con BERT e LLM zero e few shot dimostrano come BERT sia cieco al dominio, LLM zero shot coglie solo l'odio esplicito mentre quello con contesto raddoppia di recall. Nessuno dei tre produce falsi positivi
+
+Aggiunta explicitness nel CSV
+Essa va a codificare se l'odio si trova in forma esplicita (nomi, sigle), in forma dittica (nascosta dietro pronomi) o codificata (numeri e simboli)
+questo viene usato per capire quale forma di odio ciascun modello é piú capace ad individuare
+
+Challenge set completo: 472 item (392 template + 80 naturali).
+Naturali: 65 neg / 15 pos (19% positivi), nomi utente sostituiti
+con pseudonimi in fase di raccolta.
+H4 naturale = 1 item: i riferimenti codificati sono rari nel
+materiale reale. Limite dichiarato.
+
+deciso numero di run e modelli: 
+HateXplain come benchmark primario, con 3 seed per BERT e HateBERT (6 run);
+OLID con 1 seed solo, come controllo secondario (2 run);
+baseline lessicale e LLM, che non richiedono training.
+
+Otto run in totale
+
+--- STATO FINALE (riconciliazione con i risultati) ---
+
+Basi realizzate: elmetti, fibbie, Soldbuch, cuff title. Le altre sei
+dell'elenco iniziale non sono state costruite, di conseguenza il gruppo di
+controllo a carica bassa non esiste e l'analisi per livello di carica
+lessicale non è stata svolta.
+
+Funzionalità realizzate: 17 (N1-N12, H1-H4, H6). H5 e H7 non implementate;
+i template di HateCheck non sono stati riusati, gli item H6 sono originali.
+
+N10: realizzato con militaria italiana fascista e un item sovietico.
+
+Numeri finali:
+BERT        FPR 0.000  TPR 0.030
+HateBERT    FPR 0.012  TPR 0.046
+Qwen P0/P1/P2  FPR 0.01  TPR 0.072 / 0.386 / 0.819
+Lessicale   FPR 0.206  TPR 0.590

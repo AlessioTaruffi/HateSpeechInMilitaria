@@ -1,0 +1,21 @@
+template_id,functionality,label,text,pairable,explicitness
+buckleN501,N5,0,"Classic officer's buckle for the SS, bears the motto 'Meine Ehre Heisst Treue' and the SS runes.",yes,explicit
+buckleN502,N5,0,"The motto 'Gott Mit Uns' on this {FINISH} buckle is especially striking.",yes,explicit
+buckleN503,N5,0,"Polizei buckles also feature the 'Gott Mit Uns' motto.",yes,explicit
+buckleN504,N5,0,"The {BRANCH} buckle definitely did not include the 'Front Heil' motto.",yes,explicit
+buckleN101,N1,0,"The maker mark on this tells us it's made by {MAKER_B}. I love the {FINISH} finish.",yes,explicit
+buckleN102,N1,0,"I believe this {BRANCH} belt to be wartime with its distinctive catch.",yes,explicit
+buckleN301,N3,0,"The eagle's chest on this SS belt has a V shape typical of modern fakes.",no,explicit
+buckleN302,N3,0,"Several of these buckles were sold, all made of {MATERIAL} and all with a {FINISH} polish. I consider this to be one of those.",no,explicit
+buckleN401,N4,0,"SS buckles are highly sought after by collectors, this is worth around a thousand.",no,explicit
+buckleN402,N4,0,"These buckles were made in the millions and are unissued, they are not worth much.",no,explicit
+buckleN701,N7,0,"These {MATERIAL} buckles were mainly issued to the {BRANCH} during the first years of the war.",yes,explicit
+buckleN901,N9,0,"I think this {BRANCH} buckle was made by {MAKER_B}, can anyone confirm?",no,explicit
+buckleH101,H1,1,"This buckle was worn by both SS and WSS. They were true combatants.",no,deictic
+buckleH201,H2,1,"I do miss the days when these {BRANCH} buckles were in style.",no,deictic
+buckleH202,H2,1,"Yeah the {BRANCH} might have done bad things, but the fact those ideas still linger today says something.",no,explicit
+buckleH301,H3,1,"The {BRANCH} had nothing to do with those crimes, they just followed orders.",no,explicit
+buckleN801,N8,0,"Hard to look at these without thinking about who wore them and what they did.",no,explicit
+buckleH203,H2,1,"The SS motto still means something. Honour and loyalty are not fashionable anymore, more's the pity.",no,explicit
+buckleH302,H3,1,"People repeat what they were taught about the SS. Most of it was decided at Nuremberg by the winners.",no,explicit
+buckleH204,H2,1,"National Socialism got Germany back on its feet. These buckles are from the only period that worked.",no,explicit
